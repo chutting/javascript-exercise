@@ -8,6 +8,7 @@ test('合并源对象并添加新的编号', () => {
       status: 'raw'
     }
   };
+
   const expected = {
     serialNumber: '12345',
     type: 'accessory',
