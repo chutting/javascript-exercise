@@ -4,7 +4,8 @@ async function fetchData(url) {
   try {
     const result = await fetch(url);
     const json = await result.json();
-    return json;
+    document.writeln(JSON.stringify(json.name));
+    return;
   } catch (e) {
     return new Error('error msg');
   }

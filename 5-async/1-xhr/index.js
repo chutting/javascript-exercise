@@ -5,6 +5,7 @@ function fetchData(url, successCallback, errorCallback) {
   xhr.open('GET', url);
   xhr.send();
   xhr.onload = () => {
+    if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
       successCallback(xhr.responseText);
     } else {
